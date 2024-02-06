@@ -1,13 +1,15 @@
 {% extends "voting/base.html" %}
 {% block content %}
+{% load static %}
 
     <div class="login-box">
         <div class="login-logo">
-            <b>Voting System</b>
+            <b>IFMSo Student's voting System</b>
         </div>
 
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <img src="{% static 'images/logo.png' %}" class="img-responsive center-block" alt="IFM logo Image"><br>
+            <p class="login-box-msg font-weight-bold">Sign in to start your session</p>
 
             <form action="{% url 'account_login' %}" method="POST">
                 {% csrf_token %}
